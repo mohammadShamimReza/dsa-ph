@@ -1,0 +1,1 @@
+The result of 10 mod -1803207620 is 1
