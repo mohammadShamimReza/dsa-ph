@@ -6,5 +6,6 @@ int main (){
             continue ;
         }
         printf("%d\n", i);
+        printf(" %d\n", i);
     }
 }
