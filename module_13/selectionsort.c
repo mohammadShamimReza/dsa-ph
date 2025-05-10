@@ -8,27 +8,27 @@ int main(){
     {
         scanf("%d", &a[i]);
     }
-    int x;
-    scanf("%d", &x);
+    
 
-    int flag = 0;
 
     for (int i = 0; i < n-1; i++)
     {
         for (int j = i+1; j < n; j++)
         {
-            if (a[i] + a[j] == x)
-            {
-                if(flag == 0){
-                flag = 1;
-                printf("YES\n");
-                printf("%d %d", a[i], a[j]);
-            }}
-                }
+            
+               if(a[i] > a[j]){
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp; 
+            }
+        }
+                
         
     }
-    if(flag == 0){
-        printf("No\n");
+
+    for (int i = 0; i < n; i++)
+    { 
+        printf("%d", a[i]);
     }
 
     return 0;
