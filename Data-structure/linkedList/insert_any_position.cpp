@@ -47,6 +47,8 @@ int main()
     b->next = c;
 
     insert_to_any_position(head, 2, 300);
+    insert_to_any_position(head, 2, 1300);
+
     print_linked_list(head);
 
     return 0;
