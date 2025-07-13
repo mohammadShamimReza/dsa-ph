@@ -21,6 +21,8 @@ void insert_to_any_position(Node *head, int pos, int val)
     for (int i = 0; i < pos -1; i++)
     {
         temp = temp->next;
+        if (temp->next == NULL)
+            return;
     }
     newNode->next = temp->next;
     temp->next = newNode;
