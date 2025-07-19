@@ -69,6 +69,26 @@ void insert_any_position(Node *head, Node *tail, int val, int pos)
     temp->next->prev = newNode;
     temp->next = newNode;
 }
+void delete_at_head(Node *&head, Node *&tail)
+{
+    if (head == NULL)
+    {
+        return;
+    }
+    Node *deleteNode = head;
+
+    if (head->next != NULL)
+    {
+        head = head->next;
+        head->prev = NULL;
+    }
+    else
+    {
+        head = NULL;
+        tail = NULL;
+    }
+    delete deleteNode;
+};
 int main()
 {
     Node *head = NULL;
@@ -83,7 +103,7 @@ int main()
     insert_any_position(head, tail, 100, 2);
     insert_any_position(head, tail, 101, 2);
     insert_any_position(head, tail, 102, 2);
-
+    delete_at_head(head, tail);
     printDoublyLinkedList(tail);
     return 0;
 }
