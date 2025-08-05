@@ -31,7 +31,7 @@ void lavel_order(Node *root){
             q.push(f->left);
         if(f->right)
             q.push(f->right);
-    }
+    }   
 }
 
 int main()
