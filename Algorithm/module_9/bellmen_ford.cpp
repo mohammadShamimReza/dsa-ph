@@ -35,7 +35,7 @@ for (auto ed: edge_list){
     int a, b, c;
     a = ed.a;
     b = ed.b;
-    c = ed.c;
+    c = ed.c; 
     if(dis[a]!=INT_MAX&& dis[a]+c < dis[b]){
         dis[b] = dis[a] + c;
 
