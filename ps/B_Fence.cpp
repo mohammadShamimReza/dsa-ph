@@ -3,26 +3,41 @@ using namespace std;
 
 int main()
 {
-    int n, t;
-    cin >> n >> t;
-    int arr[n];
+    int n, k;
+    cin >> n >> k;
+
+    vector<int> arr(n);
+
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
-    int minh = 0;
-    int mini = 0;
-    for (int i = 0; i < t; i++)
+
+    // First window
+    int currentSum = 0;
+
+    for (int i = 0; i < k; i++)
     {
-        minh = minh + arr[i];
+        currentSum += arr[i];
     }
 
-    for (int i = t; i < n; i++)
+    // First window is initially the best
+    int minSum = currentSum;
+    int answer = 1;
+
+    // Slide window
+    for (int i = k; i < n; i++)
     {
-        int ch = minh - arr[i - t];
-        minh = ch + arr[i];
-        cout << minh;
+        currentSum = currentSum - arr[i - k] + arr[i];
+
+        if (currentSum < minSum)
+        {
+            minSum = currentSum;
+            answer = i - k + 2;
+        }
     }
-    // cout << arr[6];
+
+    cout << answer << '\n';
+
     return 0;
 }
