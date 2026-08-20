@@ -47,9 +47,11 @@ string isBalanced(string s)
             }else{
                 return "NO";
             }
-        }else{
-            return "NO";
-        }
+            }
+            else
+            {
+                return "NO";
+            }
         }
     }
 
