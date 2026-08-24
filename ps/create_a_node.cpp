@@ -16,11 +16,12 @@ class Node{
 int
 main()
 {
-  Node a(10), b(20), c(30);
+  Node *head = new Node(10);
+  Node *a = new Node(20);
+  Node *b = new Node(30);
 
-  a.next = &b;
-  b.next = &c;
-  c.next = NULL;
-  cout << a.next->next->val;
+  head->next = a;
+  a->next = b;
+  cout << a->val;
   return 0;
 }

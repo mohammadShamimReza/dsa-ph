@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/msr/Documents/dsa/ps/create_a_node'
+binary-path:     '/Users/mdshamimreza/Documents/dsa/ps/create_a_node'
 relocations:     []
 ...
